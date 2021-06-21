@@ -1,5 +1,8 @@
 // ASSESSMENT 4: JavaScript Coding Practical Questions with Jest
 
+const { it } = require("jest-circus")
+const { shuffle } = require("lodash")
+
 // Please read all questions thoroughly
 // Pseudo coding is REQUIRED
 // If you get stuck, please leave comments to help us understand your thought process
@@ -23,12 +26,51 @@ var colors1 = ["purple", "blue", "green", "yellow", "pink"]
 var colors2 = ["chartreuse", "indigo", "periwinkle", "ochre", "aquamarine", "saffron"]
 // Expected output example (can be a different order): ["saffron", "aquamarine", "periwinkle", "indigo", "ochre"]
 
+// write out jest test with the description beggining with the functions name i will be using later 
+// write in varialbe arrays which holds strings inside  in the test in order to make the test pass 
+//put in expected outcomes 
+//variables let color1 
+//          let color2 
 
+//got the test written out for boths problems. 
+//needing help with the logic for them 
+describe ("removeAndRandom", () => {
+  let colors1 = ["purple", "blue", "green", "yellow", "pink"]
+  let colors2 = ["chartreuse", "indigo", "periwinkle", "ochre", "aquamarine", "saffron"]
+  it (" removes the first item from the array and shuffles",()=> {
+    expect(removeAndRandom(colors1)).toEqual(
+//write the logic that will shift and shuffle colors 1
+
+    )
+    expect(removeAndRandom(colors2)).toEqual(
+
+        //write the logic that will shift and shuffle colors 2
+    )
+  })
+} )
 
 
 
 // b) Create the function that makes the test pass.
+ //write a function that will go through the array remove the first index  and then randomize the array 
 
+ // trying to use the map highorder function to go through the array.
+ // then using the built in methods shift to remove the first index and shuffle to randomize them 
+//shift(colors1) shuffle(colors1)
+
+ const removeAndRandom = (array) => {
+     return array
+ }
+ 
+ console.log(removeAndRandom(colors1))
+ 
+//  colors1.map(value => {
+
+//     let remove = shift(colors1){
+//         let random = shuffle(colors1)
+//     }
+    
+// })
 
 
 
@@ -36,6 +78,22 @@ var colors2 = ["chartreuse", "indigo", "periwinkle", "ochre", "aquamarine", "saf
 // --------------------2) Create a function that takes an array of numbers and returns an array of the minimum and maximum numbers in that order.
 
 // a) Create a test with expect statements for each of the variables provided.
+
+// write describe test with function minMAX for the test 
+
+// create describe the test description using describe 
+//add the variables to the test 
+//add the expectations of the test 
+
+describe ( "minMAX", () => {
+    let nums1 = [3, 56, -8, 0 ,23, 6]
+    let nums2 = [109, 5, 9, -59, 8, 24]
+    it("gets the minimum and max number of the array ")
+    //write the expectation of the function 
+    expect(minMax(nums1)).toEqual(56, -8)
+    expect(minMax(nums2).toEqual(109, -59)
+    
+})
 
 var nums1 = [3, 56, 90, -8, 0, 23, 6]
 // Expected output: [-8, 90]
